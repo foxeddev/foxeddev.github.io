@@ -23,10 +23,10 @@ export default function Home() {
         <section className="flex flex-col items-center gap-16">
           <Image src={Logo} alt="" className="-mt-40"></Image>
           <div className="flex flex-col items-center gap-2 text-center">
-            <p className="font-mono text-gray-500 text-4xl">Hi, I'm</p>
+            <p className="font-mono text-gray-500 text-4xl">Hi, I&apos;m</p>
             <h1 className="font-extrabold text-gray-800 text-9xl">FOXED</h1>
             <p className="font-mono text-gray-500 text-xl">
-              I'm a {now.getFullYear() - 2010} year old developer and designer
+              I&apos;m a {now.getFullYear() - 2010} year old developer and designer
               from Germany.
             </p>
           </div>
