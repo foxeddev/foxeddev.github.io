@@ -6,7 +6,6 @@ import Logo from "@/public/img/logo-foxeddev.png";
 import Card from "@/components/Card";
 
 import { SiGithub, SiDiscord } from "react-icons/si";
-import { FaHeart } from "react-icons/fa";
 
 export default function Home() {
   const now = new Date();
@@ -26,8 +25,8 @@ export default function Home() {
             <p className="font-mono text-gray-500 text-4xl">Hi, I&apos;m</p>
             <h1 className="font-extrabold text-gray-800 text-9xl">FOXED</h1>
             <p className="font-mono text-gray-500 text-xl">
-              I&apos;m a {now.getFullYear() - 2010} year old developer and designer
-              from Germany.
+              I&apos;m a {now.getFullYear() - 2010} year old developer and
+              designer from Germany.
             </p>
           </div>
         </section>
@@ -59,10 +58,9 @@ export default function Home() {
             </h3>
           </Card>
           <Card cols={2} align="left">
-            <FaHeart size={32} className="fill-pink-400" />
             <div>
               <h3 className="font-medium text-2xl">Tech Stack or something</h3>
-              <p>
+              <p className="font-mono text-gray-500">
                 OS:{" "}
                 <Link
                   href="https://archlinux.org/"
