@@ -19,20 +19,24 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col justify-end items-center bg-[url(/img/background-arctic-fox.jpg)] bg-cover bg-fixed min-h-screen size-full font-sans text-gray-800 scroll-smooth">
-      <div className="flex flex-col gap-32 bg-white/75 md:m-32 mt-128 md:mt-128 p-4 md:p-20 w-full max-w-4xl">
-        <section className="flex flex-col items-center gap-16">
-          <Image src={Logo} alt="" className="-mt-40"></Image>
+    <div className="bg-[url(/img/background-arctic-fox.jpg)] bg-cover bg-fixed min-h-screen font-sans text-gray-800 scroll-smooth">
+      <header className="flex flex-col justify-end items-center min-h-screen">
+        <div className="flex flex-col items-center gap-16 bg-white/75 p-16 w-full max-w-4xl">
+          <Image src={Logo} alt="" className="-mt-36"></Image>
           <div className="flex flex-col items-center gap-2 text-center">
             <p className="font-mono text-gray-500 text-4xl">Hi, I&apos;m</p>
-            <h1 className="font-extrabold text-gray-800 text-8xl md:text-9xl">FOXED</h1>
+            <h1 className="font-extrabold text-gray-800 text-8xl sm:text-9xl">
+              FOXED
+            </h1>
             <p className="font-mono text-gray-500 text-xl">
               I&apos;m a {now.getFullYear() - 2010} year old developer and
               designer from Germany.
             </p>
           </div>
-        </section>
-        <section className="gap-8 grid grid-cols-2">
+        </div>
+      </header>
+      <main className="flex flex-col items-center">
+        <div className="gap-8 grid grid-cols-2 bg-white/75 p-16 w-full max-w-4xl">
           <Card>
             <SiGithub size={48} className="fill-pink-400"></SiGithub>
             <h3 className="font-medium text-2xl">
@@ -135,8 +139,13 @@ export default function Home() {
             <FaClock size={48} className="fill-pink-400"></FaClock>
             <h3 className="font-medium text-2xl">More stuff coming soon!</h3>
           </Card>
-        </section>
-      </div>
+        </div>
+      </main>
+      <header className="flex flex-col justify-start items-center md:min-h-64">
+        <div className="flex flex-col items-center gap-16 bg-white/75 p-16 w-full max-w-4xl">
+          <p className="font-mono text-gray-500">Made with 💜 by Foxed</p>
+        </div>
+      </header>
     </div>
   );
 }
