@@ -19,8 +19,11 @@ export default function Clock({
   };
 
   const [time, setTime] = useState(getTimeParts());
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const interval = setInterval(() => {
       setTime(getTimeParts());
     }, 1000);
@@ -36,7 +39,7 @@ export default function Clock({
         ) : (
           ""
         )}
-        {time.hours}
+        {mounted ? time.hours : null}
       </span>
 
       <span className="hidden md:inline">:</span>
@@ -46,7 +49,7 @@ export default function Clock({
         {showSubtext && (
           <small className="-bottom-2.5 absolute text-sm">minutes</small>
         )}
-        {time.minutes}
+        {mounted ? time.minutes : null}
       </span>
 
       {hasSeconds ? (
@@ -58,7 +61,7 @@ export default function Clock({
             {showSubtext && (
               <small className="-bottom-2.5 absolute text-sm">seconds</small>
             )}
-            {time.seconds}
+            {mounted ? time.seconds : null}
           </span>
         </>
       ) : (
