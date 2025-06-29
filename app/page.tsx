@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="bg-[url(/img/background-arctic-fox.jpg)] bg-cover bg-fixed min-h-screen font-sans text-gray-800 scroll-smooth">
       <header className="flex flex-col justify-end items-center min-h-screen">
-        <div className="flex flex-col items-center gap-16 bg-white/75 p-16 w-full max-w-4xl">
+        <div className="flex flex-col items-center gap-16 bg-white/75 p-4 md:p-16 w-full max-w-4xl">
           <Image src={Logo} alt="" className="-mt-36"></Image>
           <div className="flex flex-col items-center gap-2 text-center">
             <p className="font-mono text-gray-500 text-4xl">Hi, I&apos;m</p>
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </header>
       <main className="flex flex-col items-center">
-        <div className="gap-8 grid grid-cols-2 bg-white/75 p-16 w-full max-w-4xl">
+        <div className="gap-8 grid grid-cols-2 bg-white/75 p-4 md:p-16 w-full max-w-4xl">
           <Card>
             <SiGithub size={48} className="fill-pink-400"></SiGithub>
             <h3 className="font-medium text-2xl">
@@ -141,8 +141,8 @@ export default function Home() {
           </Card>
         </div>
       </main>
-      <header className="flex flex-col justify-start items-center md:min-h-64">
-        <div className="flex flex-col items-center gap-16 bg-white/75 p-16 w-full max-w-4xl">
+      <header className="flex flex-col justify-start items-center">
+        <div className="flex flex-col items-center gap-16 bg-white/75 p-4 md:p-16 w-full max-w-4xl">
           <p className="font-mono text-gray-500">Made with 💜 by Foxed</p>
         </div>
       </header>
