@@ -37,8 +37,7 @@ export default function Home() {
       </header>
       <main className="flex flex-col items-center">
         <div className="gap-8 grid grid-cols-2 bg-white/75 p-4 md:p-16 w-full max-w-4xl">
-          <Card>
-            <SiGithub size={48} className="fill-pink-400"></SiGithub>
+          <Card icon={SiGithub}>
             <h3 className="font-medium text-2xl">
               GitHub:{" "}
               <Link
@@ -50,8 +49,7 @@ export default function Home() {
               </Link>
             </h3>
           </Card>
-          <Card>
-            <SiDiscord size={48} className="fill-pink-400"></SiDiscord>
+          <Card icon={SiDiscord}>
             <h3 className="font-medium text-2xl">
               Discord:{" "}
               <span onClick={copy} className="text-indigo-600 cursor-pointer">
@@ -131,8 +129,7 @@ export default function Home() {
           <Card>
             <Clock hasSeconds showSubtext />
           </Card>
-          <Card>
-            <FaClock size={48} className="fill-pink-400"></FaClock>
+          <Card icon={FaClock}>
             <h3 className="font-medium text-2xl">More stuff coming soon!</h3>
           </Card>
         </div>

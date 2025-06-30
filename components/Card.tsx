@@ -1,10 +1,15 @@
+import React from "react";
+import { IconType } from "react-icons";
+
 export default function Card({
   children,
+  icon,
   align = "center",
   cols = 1,
   rows = 1,
 }: {
   children: React.ReactNode;
+  icon?: IconType;
   align?: "left" | "center" | "right";
   cols?: number;
   rows?: number;
@@ -24,6 +29,9 @@ export default function Card({
         gridRowEnd: `span ${rows}`,
       }}
     >
+      {icon
+        ? React.createElement(icon, { size: 48, className: "fill-pink-400" })
+        : null}
       {children}
     </div>
   );
