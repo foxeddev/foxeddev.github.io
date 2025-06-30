@@ -12,10 +12,10 @@ import Clock from "@/components/Clock";
 export default function Home() {
   const now = new Date();
 
-  function copyDiscordUsername(e: React.MouseEvent<HTMLAnchorElement>) {
-    e.preventDefault();
-    navigator.clipboard.writeText("foxed.alt");
-    alert("Copied to clipboard!");
+  function copy(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    const target = e.target as HTMLAnchorElement;
+    navigator.clipboard.writeText(target.innerHTML);
+    alert("Copied to clipboard!"); // Fix this
   }
 
   return (
@@ -54,13 +54,9 @@ export default function Home() {
             <SiDiscord size={48} className="fill-pink-400"></SiDiscord>
             <h3 className="font-medium text-2xl">
               Discord:{" "}
-              <Link
-                href={""}
-                onClick={copyDiscordUsername}
-                className="text-indigo-600"
-              >
-                Foxed.Alt
-              </Link>
+              <span onClick={copy} className="text-indigo-600 cursor-pointer">
+                FoxedDev
+              </span>
             </h3>
           </Card>
           <Card cols={2} align="left">
