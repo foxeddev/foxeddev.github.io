@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rubik.variable} ${spaceMono.variable} antialiased`}
+        className={`${rubik.variable} ${spaceMono.variable} antialiased bg-[url(/img/background-arctic-fox.jpg)] bg-cover bg-fixed min-h-screen font-sans text-gray-800 scroll-smooth`}
       >
         {children}
       </body>
