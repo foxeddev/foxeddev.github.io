@@ -9,6 +9,12 @@ export default function Clock({
   hasSeconds?: boolean;
   showSubtext?: boolean;
 }) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const getTimeParts = () => {
     const now = new Date();
     return {
@@ -36,7 +42,7 @@ export default function Clock({
         ) : (
           ""
         )}
-        {time.hours}
+        {isClient ? time.hours : "##"}
       </span>
 
       <span className="hidden md:inline">:</span>
@@ -46,7 +52,7 @@ export default function Clock({
         {showSubtext && (
           <small className="-bottom-2.5 absolute text-sm">minutes</small>
         )}
-        {time.minutes}
+        {isClient ? time.minutes : "##"}
       </span>
 
       {hasSeconds ? (
@@ -58,7 +64,7 @@ export default function Clock({
             {showSubtext && (
               <small className="-bottom-2.5 absolute text-sm">seconds</small>
             )}
-            {time.seconds}
+            {isClient ? time.seconds : "##"}
           </span>
         </>
       ) : (
