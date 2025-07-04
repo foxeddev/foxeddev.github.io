@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik, Space_Mono } from "next/font/google";
 import Image from "next/image";
-import BackgroundImage from "@/public/img/background-arctic-fox.jpg";
+import BackgroundImage from "@/public/img/background.jpg";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Hi, I'm Foxed.",
     description: "I'm a 15 year old developer and designer from Germany.",
     siteName: "FoxedDev",
-    images: [{ url: "https://foxeddev.github.io/img/logo-foxeddev.png" }],
+    images: [{ url: "https://foxeddev.github.io/img/logo.png" }],
   },
 };
 

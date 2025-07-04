@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/img/logo-foxeddev.png";
+import Logo from "@/public/img/logo.png";
 import Card from "@/components/Card";
 
 import { SiGithub, SiDiscord } from "react-icons/si";
