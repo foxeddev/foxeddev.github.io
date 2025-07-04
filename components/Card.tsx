@@ -23,7 +23,7 @@ export default function Card({
 
   return (
     <div
-      className={`flex flex-col gap-8 col-span-$(cols) bg-white p-8 justify-center ${alignClass}`}
+      className={`flex flex-col gap-8 bg-white p-8 justify-center ${alignClass}`}
       style={{
         gridColumnEnd: `span ${cols}`,
         gridRowEnd: `span ${rows}`,
