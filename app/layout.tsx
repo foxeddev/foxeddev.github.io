@@ -16,8 +16,17 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hi, I'm Foxed.",
-  description: "Developer Portfolio",
+  metadataBase: new URL("https://foxeddev.github.io"),
+  title: { default: "Hi, I'm Foxed.", template: "%s | FoxedDev" },
+  description: "I'm a 15 year old developer and designer from Germany.",
+  openGraph: {
+    type: "website",
+    url: "https://foxeddev.github.io",
+    title: "Hi, I'm Foxed.",
+    description: "I'm a 15 year old developer and designer from Germany.",
+    siteName: "FoxedDev",
+    images: [{ url: "https://foxeddev.github.io/img/logo-foxeddev.png" }],
+  },
 };
 
 export default function RootLayout({
