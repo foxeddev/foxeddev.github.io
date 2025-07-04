@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/img/logo.png";
+import Logo from "@/public/img/logo.svg";
 import Card from "@/components/Card";
 
 import { SiGithub, SiDiscord } from "react-icons/si";
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Header>
-        <Image src={Logo} alt="" className="-mt-36"></Image>
+        <Image src={Logo} alt="" className="-mt-36 size-64"></Image>
         <div className="flex flex-col items-center gap-2 text-center">
           <p className="font-mono text-gray-500 text-4xl">Hi, I&apos;m</p>
           <h1 className="font-extrabold text-gray-800 text-8xl sm:text-9xl">
