@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/img/logo.svg";
 import Card from "@/components/Card";
