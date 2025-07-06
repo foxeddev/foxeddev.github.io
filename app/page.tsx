@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "@/public/img/logo.svg";
+import Logo from "@/components/Logo";
 import Card from "@/components/Card";
 import toast from "react-hot-toast";
 
