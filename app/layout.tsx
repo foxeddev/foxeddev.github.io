@@ -4,6 +4,8 @@ import Image from "next/image";
 import BackgroundImage from "@/public/img/background.jpg";
 import "./globals.css";
 
+import { Toaster } from "react-hot-toast";
+
 const rubik = Rubik({
   variable: "--font-rubik",
   subsets: ["latin"],
@@ -34,6 +36,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const toastClasses = "rounded-none! py-4! px-8!";
+
   return (
     <html lang="en">
       <body
@@ -45,6 +49,10 @@ export default function RootLayout({
           className="-z-10 fixed w-screen h-screen object-cover"
         />
         {children}
+        <Toaster
+          position="bottom-center"
+          toastOptions={{ className: toastClasses }}
+        />
       </body>
     </html>
   );
