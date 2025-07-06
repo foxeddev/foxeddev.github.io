@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Logo from "@/public/img/logo.svg";
 import Card from "@/components/Card";
+import toast from "react-hot-toast";
 
 import { SiGithub, SiDiscord } from "react-icons/si";
 import { FaClock } from "react-icons/fa";
@@ -17,7 +18,9 @@ export default function Home() {
   function copy(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     const target = e.target as HTMLAnchorElement;
     navigator.clipboard.writeText(target.innerHTML);
-    alert("Copied to clipboard!"); // Fix this
+    toast("Copied to clipboard!", {
+      icon: "📋",
+    });
   }
 
   return (
