@@ -77,7 +77,7 @@ export default function Home() {
           </h3>
         </Card>
         <Card align="left">
-          <h3 className="font-medium text-2xl">🌱 I'm currently learning</h3>
+          <h3 className="font-medium text-2xl">🌱 I&apos;m currently learning</h3>
           <p className="font-mono text-gray-500">
             React <br />
             NextJS <br />
