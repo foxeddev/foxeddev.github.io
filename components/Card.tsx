@@ -25,14 +25,17 @@ export default function Card({
 
   return (
     <div
-      className={`flex flex-col gap-8 bg-white p-8 justify-center ${alignClass} ${className}`}
+      className={`flex flex-col gap-2 bg-white p-8 justify-center ${alignClass} ${className}`}
       style={{
         gridColumnEnd: `span ${cols}`,
         gridRowEnd: `span ${rows}`,
       }}
     >
       {icon
-        ? React.createElement(icon, { size: 48, className: "fill-pink-400" })
+        ? React.createElement(icon, {
+            size: 48,
+            className: "fill-pink-400 m-4",
+          })
         : null}
       {children}
     </div>
