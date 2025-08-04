@@ -13,8 +13,21 @@ section {
   text-align: center;
 }
 
+@media screen and (max-width: 900px) {
+  section {
+    padding: 16px;
+  }
+}
+
 section.grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+  section.grid {
+    display: flex;
+    flex-direction: column;
+  }
 }

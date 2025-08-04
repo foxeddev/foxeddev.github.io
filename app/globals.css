@@ -9,6 +9,8 @@
 
   --sans: "Rubik", Arial, Helvetica, sans-serif;
   --mono: "Space Mono", "Courier New", monospace;
+
+  --max-w-mobile: 900px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +72,12 @@ body > img {
 h1 {
   font-size: 128px;
   font-weight: 800;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 96;
+  }
 }
 
 h3 {
