@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import styles from "./Clock.module.css";
 
 export default function Clock({
-  hasSeconds = false,
+  showSeconds = false,
   showSubtext = false,
 }: {
-  hasSeconds?: boolean;
+  showSeconds?: boolean;
   showSubtext?: boolean;
 }) {
   const [isClient, setIsClient] = useState(false);
@@ -34,36 +35,28 @@ export default function Clock({
   }, []);
 
   return (
-    <h3 className="flex md:flex-row flex-col gap-4 md:gap-0 font-mono font-bold text-indigo-600 text-5xl">
+    <h3 className={styles.clock}>
       {/* Hours */}
-      <span className="relative">
-        {showSubtext ? (
-          <small className="-bottom-2.5 absolute text-sm">hours</small>
-        ) : (
-          ""
-        )}
+      <span>
+        {showSubtext ? <small>hours</small> : ""}
         {isClient ? time.hours : "##"}
       </span>
 
-      <span className="hidden md:inline">:</span>
+      <span>:</span>
 
       {/* Minutes */}
-      <span className="relative">
-        {showSubtext && (
-          <small className="-bottom-2.5 absolute text-sm">minutes</small>
-        )}
+      <span>
+        {showSubtext && <small>minutes</small>}
         {isClient ? time.minutes : "##"}
       </span>
 
-      {hasSeconds ? (
+      {showSeconds ? (
         <>
-          <span className="hidden md:inline">:</span>
+          <span>:</span>
 
           {/* Seconds */}
-          <span className="relative">
-            {showSubtext && (
-              <small className="-bottom-2.5 absolute text-sm">seconds</small>
-            )}
+          <span>
+            {showSubtext && <small>seconds</small>}
             {isClient ? time.seconds : "##"}
           </span>
         </>

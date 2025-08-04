@@ -1,0 +1,14 @@
+.clock span {
+  font-family: var(--mono);
+  color: var(--primary);
+  font-size: 48px;
+  font-weight: 700;
+  position: relative;
+}
+
+.clock span small {
+  position: absolute;
+  font-size: 15px;
+  left: 0;
+  bottom: 0;
+}

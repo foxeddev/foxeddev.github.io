@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Rubik, Space_Mono } from "next/font/google";
-import Image from "next/image";
-import BackgroundImage from "@/public/img/background.jpg";
-import "./globals.css";
-
+import ThemeImage from "@/components/ThemeImage";
+import BackgroundImageLight from "@/public/img/arctic_fox.jpg";
+import BackgroundImageDark from "@/public/img/aurora.png";
 import { Toaster } from "react-hot-toast";
+import "./globals.css";
+import "@/styles/sections.css";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -36,22 +37,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const toastClasses = "rounded-none! py-4! px-8!";
-
   return (
     <html lang="en">
-      <body
-        className={`${rubik.variable} ${spaceMono.variable} antialiased min-h-screen font-sans text-gray-800 scroll-smooth`}
-      >
-        <Image
-          src={BackgroundImage}
+      <body className={`${rubik.variable} ${spaceMono.variable}`}>
+        <ThemeImage
+          srcLight={BackgroundImageLight}
+          srcDark={BackgroundImageDark}
           alt={""}
-          className="-z-10 fixed w-screen h-screen object-cover"
         />
         {children}
         <Toaster
           position="bottom-center"
-          toastOptions={{ className: toastClasses }}
+          toastOptions={{
+            style: {
+              padding: "16px",
+              borderRadius: "",
+            },
+          }}
         />
       </body>
     </html>
