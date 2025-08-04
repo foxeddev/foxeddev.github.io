@@ -1,42 +1,35 @@
 import React from "react";
-import { IconType } from "react-icons";
+import styles from "./Card.module.css";
 
 export default function Card({
   children,
-  className = "",
-  icon,
   align = "center",
   cols = 1,
   rows = 1,
+  noPad = false,
 }: {
   children: React.ReactNode;
-  className?: string;
-  icon?: IconType;
   align?: "left" | "center" | "right";
   cols?: number;
   rows?: number;
+  noPad?: boolean;
 }) {
   const alignClass =
-    align === "left"
-      ? "items-start text-left"
-      : align === "right"
-      ? "items-end text-right"
-      : "items-center text-center";
+    {
+      left: styles.left,
+      right: styles.right,
+      center: styles.center,
+    }[align] || "";
 
   return (
     <div
-      className={`flex flex-col gap-2 bg-white p-8 justify-center ${alignClass} ${className}`}
+      className={`${styles.card} ${alignClass}`.trim()}
       style={{
-        gridColumnEnd: `span ${cols}`,
-        gridRowEnd: `span ${rows}`,
+        ...(cols !== 1 && { gridColumnEnd: `span ${cols}` }),
+        ...(rows !== 1 && { gridRowEnd: `span ${rows}` }),
+        ...(noPad && { padding: 0 }),
       }}
     >
-      {icon
-        ? React.createElement(icon, {
-            size: 48,
-            className: "fill-pink-400 m-4",
-          })
-        : null}
       {children}
     </div>
   );

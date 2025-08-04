@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+  background-color: var(--bg);
+}
+
+.card svg:nth-child(1) {
+  fill: var(--accent);
+  width: 48px;
+  height: 48px;
+}
+
+.card.left {
+  text-align: left;
+  align-items: left;
+}
+
+.card.right {
+  text-align: right;
+  align-items: right;
+}
+
+.card.center {
+  text-align: center;
+  align-items: center;
+}

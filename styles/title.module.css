@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+}
+
+.title p.tagline {
+  font-size: 36px;
+}
+
+.title p.subtitle {
+  font-size: 20px;
+}
