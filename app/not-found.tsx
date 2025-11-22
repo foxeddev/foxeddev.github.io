@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "@/components/Footer";
 import { FaRegFrown } from "react-icons/fa";
 import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
@@ -20,7 +19,6 @@ export default function Error() {
           </div>
         </section>
       </header>
-      <Footer />
     </div>
   );
 }
