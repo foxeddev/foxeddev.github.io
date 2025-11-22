@@ -98,7 +98,7 @@ export default function Home() {
               <Link href="https://hydeproject.pages.dev/" target="_blank">
                 HyDE
               </Link>
-              (
+              {" "}(
               <Link href="https://hypr.land/" target="_blank">
                 Hyprland
               </Link>
