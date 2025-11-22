@@ -12,6 +12,7 @@ import toast from "react-hot-toast";
 import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
 import cardStyles from "@/styles/card.module.css";
+import SplitType from "split-type";
 
 export default function Home() {
   const copy = (text: string) => {
@@ -28,7 +29,13 @@ export default function Home() {
           <Logo className={headerIconStyles.icon} />
           <div className={titleStyles.title}>
             <p className={titleStyles.tagline}>Hi, I&apos;m</p>
-            <h1>FOXED</h1>
+            <h1
+              ref={(el) => {
+                if (el) new SplitType(el, { split: "chars" });
+              }}
+            >
+              FOXED
+            </h1>
             <p className={titleStyles.subtitle}>
               I&apos;m a Minecraft data pack creator and web developer from
               Germany.

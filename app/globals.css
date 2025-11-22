@@ -83,6 +83,16 @@ h1 {
   font-weight: 800;
 }
 
+h1 .char {
+  transition: 0.1s;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+}
+
+h1 .char:hover {
+  transform: translate(0, -20px);
+  text-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
+}
+
 @media screen and (max-width: 900px) {
   h1 {
     font-size: 96;
