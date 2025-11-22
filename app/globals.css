@@ -52,8 +52,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background-color: var(--secondary);
+}
+
 a {
   color: var(--primary);
+}
+
+a:not(p a) {
+  color: var(--text);
+  text-decoration: none;
 }
 
 img {
@@ -85,14 +94,9 @@ h3 {
   font-weight: 500;
 }
 
-h3 a {
-  text-decoration: none;
-}
-
 mark {
   color: var(--primary);
   background-color: transparent;
-  cursor: copy;
 }
 
 p {

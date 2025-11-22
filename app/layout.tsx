@@ -20,13 +20,13 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://foxeddev.github.io"),
-  title: { default: "Hi, I'm Foxed.", template: "%s | FoxedDev" },
-  description: "I'm a 15 year old developer and designer from Germany.",
+  title: { default: "Hi, I'm Foxed!", template: "%s | FoxedDev" },
+  description: "I'm a Minecraft data pack creator and web developer from Germany.",
   openGraph: {
     type: "website",
     url: "https://foxeddev.github.io",
-    title: "Hi, I'm Foxed.",
-    description: "I'm a 15 year old developer and designer from Germany.",
+    title: "Hi, I'm Foxed!",
+    description: "I'm a Minecraft data pack creator and web developer from Germany.",
     siteName: "FoxedDev",
     images: [{ url: "https://foxeddev.github.io/img/logo.png" }],
   },

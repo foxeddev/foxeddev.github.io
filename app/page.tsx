@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
-import Card from "@/components/Card";
 import { SiGithub, SiDiscord, SiGmail } from "react-icons/si";
 import { FaClock } from "react-icons/fa";
 import FoxFaceplant from "@/public/img/fox_faceplant.gif";
@@ -12,10 +11,9 @@ import Footer from "@/components/Footer";
 import toast from "react-hot-toast";
 import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
+import cardStyles from "@/styles/card.module.css";
 
 export default function Home() {
-  const now = new Date();
-
   const copy = (text: string) => {
     navigator.clipboard.writeText(text);
     toast("Copied to clipboard!", {
@@ -32,50 +30,63 @@ export default function Home() {
             <p className={titleStyles.tagline}>Hi, I&apos;m</p>
             <h1>FOXED</h1>
             <p className={titleStyles.subtitle}>
-              I&apos;m a {now.getFullYear() - 2010} year old developer and
-              designer from Germany.
+              I&apos;m a Minecraft data pack creator and web developer from
+              Germany.
             </p>
           </div>
         </section>
       </header>
       <main>
         <section className="grid">
-          <Card>
+          <Link
+            className={cardStyles.card}
+            href={"https://github.com/foxeddev"}
+            target="_blank"
+          >
             <SiGithub />
             <h3>
-              GitHub:{" "}
-              <Link href={"https://github.com/foxeddev"} target="_blank">
-                FoxedDev
-              </Link>
+              GitHub: <mark>FoxedDev</mark>
             </h3>
-          </Card>
-          <Card>
+          </Link>
+          <div
+            className={cardStyles.card}
+            style={{ cursor: "pointer" }}
+            onClick={() => copy("foxeddev")}
+          >
             <SiDiscord />
             <h3>
-              Discord: <mark onClick={() => copy("foxeddev")}>FoxedDev</mark>
+              Discord: <mark>FoxedDev</mark>
             </h3>
-          </Card>
-          <Card rows={2} noPad>
-            <Image src={FoxFaceplant} alt={""} unoptimized />
-          </Card>
-          <Card>
+          </div>
+          <Image
+            className={cardStyles.card}
+            src={FoxFaceplant}
+            alt={""}
+            style={{ gridRowEnd: `span 2` }}
+            unoptimized
+          />
+          <Link
+            className={cardStyles.card}
+            href={"mailto:foxed.dev@gmail.com"}
+            target="_blank"
+          >
             <SiGmail />
             <h3>
-              Mail:{" "}
-              <Link href={"mailto:foxed.dev@gmail.com"} target="_blank">
-                foxed.dev@gmail.com
-              </Link>
+              Mail: <mark>foxed.dev@gmail.com</mark>
             </h3>
-          </Card>
-          <Card align="left">
+          </Link>
+          <div className={`${cardStyles.card} ${cardStyles.left}`}>
             <h3>🌱 I&apos;m currently learning</h3>
             <p>
               React <br />
               NextJS <br />
               TailwindCSS <br />
             </p>
-          </Card>
-          <Card cols={2} align="left">
+          </div>
+          <div
+            className={`${cardStyles.card} ${cardStyles.left}`}
+            style={{ gridColumnEnd: `span 2` }}
+          >
             <h3>💻 Tech Stack</h3>
             <p>
               OS:{" "}
@@ -107,14 +118,14 @@ export default function Home() {
                 Prism Launcher
               </Link>
             </p>
-          </Card>
-          <Card>
+          </div>
+          <div className={cardStyles.card}>
             <Clock showSeconds showSubtext />
-          </Card>
-          <Card>
+          </div>
+          <div className={cardStyles.card}>
             <FaClock />
             <h3>More stuff coming soon!</h3>
-          </Card>
+          </div>
         </section>
       </main>
       <Footer />
