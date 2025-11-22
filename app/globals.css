@@ -33,6 +33,7 @@
 
 * {
   box-sizing: border-box;
+  font-kerning: none;
   padding: 0;
   margin: 0;
 }
