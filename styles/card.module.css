@@ -5,6 +5,7 @@
   background-color: var(--bg);
   text-align: center;
   align-items: center;
+  overflow-x: scroll;
   box-shadow: 0 0 0 0 var(--primary);
   transition: 0.15s;
 }
@@ -22,6 +23,10 @@
 .card:has(*) {
   gap: 32px;
   padding: 32px;
+}
+
+.card p {
+  width: max-content
 }
 
 @media screen and (max-width: 900px) {

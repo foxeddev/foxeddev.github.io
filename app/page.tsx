@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
-import { SiGithub, SiDiscord, SiGmail } from "react-icons/si";
+import { SiGithub, SiDiscord, SiGmail, SiModrinth } from "react-icons/si";
 import { FaClock } from "react-icons/fa";
 import FoxFaceplant from "@/public/img/fox_faceplant.gif";
 import Clock from "@/components/Clock";
@@ -40,6 +40,16 @@ export default function Home() {
         <section className="grid">
           <Link
             className={cardStyles.card}
+            href={"https://modrinth.com/user/foxeddev"}
+            target="_blank"
+          >
+            <SiModrinth />
+            <h3>
+              Modrinth: <mark>FoxedDev</mark>
+            </h3>
+          </Link>
+          <Link
+            className={cardStyles.card}
             href={"https://github.com/foxeddev"}
             target="_blank"
           >
@@ -72,7 +82,7 @@ export default function Home() {
           >
             <SiGmail />
             <h3>
-              Mail: <mark>foxed.dev@gmail.com</mark>
+              <mark>E-Mail</mark>
             </h3>
           </Link>
           <div className={`${cardStyles.card} ${cardStyles.left}`}>
@@ -83,10 +93,7 @@ export default function Home() {
               TailwindCSS <br />
             </p>
           </div>
-          <div
-            className={`${cardStyles.card} ${cardStyles.left}`}
-            style={{ gridColumnEnd: `span 2` }}
-          >
+          <div className={`${cardStyles.card} ${cardStyles.left}`}>
             <h3>💻 Tech Stack</h3>
             <p>
               OS:{" "}
@@ -97,8 +104,8 @@ export default function Home() {
               WM:{" "}
               <Link href="https://hydeproject.pages.dev/" target="_blank">
                 HyDE
-              </Link>
-              {" "}(
+              </Link>{" "}
+              (
               <Link href="https://hypr.land/" target="_blank">
                 Hyprland
               </Link>
