@@ -8,20 +8,12 @@ import { FaClock } from "react-icons/fa";
 import FoxFaceplant from "@/public/img/fox_faceplant.gif";
 import Clock from "@/components/Clock";
 import Footer from "@/components/Footer";
-import toast from "react-hot-toast";
 import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
 import cardStyles from "@/styles/card.module.css";
 import SplitType from "split-type";
 
 export default function Home() {
-  const copy = (text: string) => {
-    navigator.clipboard.writeText(text);
-    toast("Copied to clipboard!", {
-      icon: "📋",
-    });
-  };
-
   return (
     <div>
       <header>
@@ -65,16 +57,16 @@ export default function Home() {
               GitHub: <mark>FoxedDev</mark>
             </h3>
           </Link>
-          <div
+          <Copy
             className={cardStyles.card}
             style={{ cursor: "pointer" }}
-            onClick={() => copy("foxeddev")}
+            copytext="foxeddev"
           >
             <SiDiscord />
             <h3>
               Discord: <mark>FoxedDev</mark>
             </h3>
-          </div>
+          </Copy>
           <Image
             className={cardStyles.card}
             src={FoxFaceplant}
