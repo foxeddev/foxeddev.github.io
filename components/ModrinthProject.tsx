@@ -24,6 +24,7 @@ export default async function ModrinthProject(props: ModrinthProjectProps) {
       {...props}
       href={`https://modrinth.com/project/${project.id}`}
       className={`${props.className} ${styles.root}`}
+      target="_blank"
     >
       {project.icon_url && (
         <Image
