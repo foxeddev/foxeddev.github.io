@@ -3,7 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
-import { SiGithub, SiDiscord, SiGmail, SiModrinth } from "react-icons/si";
+import {
+  SiGithub,
+  SiDiscord,
+  SiGmail,
+  SiModrinth,
+  SiKofi,
+} from "react-icons/si";
 import { FaClock } from "react-icons/fa";
 import FoxFaceplant from "@/public/img/fox_faceplant.gif";
 import Clock from "@/components/Clock";
@@ -12,6 +18,7 @@ import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
 import cardStyles from "@/styles/card.module.css";
 import SplitType from "split-type";
+import Copy from "@/components/Copy";
 
 export default function Home() {
   return (
@@ -76,6 +83,16 @@ export default function Home() {
           />
           <Link
             className={cardStyles.card}
+            href={"https://ko-fi.com/foxeddev"}
+            target="_blank"
+          >
+            <SiKofi />
+            <h3>
+              Ko-fi: <mark>FoxedDev</mark>
+            </h3>
+          </Link>
+          <Link
+            className={cardStyles.card}
             href={"mailto:foxed.dev@gmail.com"}
             target="_blank"
           >
@@ -92,7 +109,10 @@ export default function Home() {
               TailwindCSS <br />
             </p>
           </div>
-          <div className={`${cardStyles.card} ${cardStyles.left}`}>
+          <div
+            className={`${cardStyles.card} ${cardStyles.left}`}
+            style={{ gridColumnEnd: `span 2` }}
+          >
             <h3>💻 Tech Stack</h3>
             <p>
               OS:{" "}
