@@ -25,10 +25,6 @@
   padding: 32px;
 }
 
-.card p {
-  width: max-content
-}
-
 @media screen and (max-width: 900px) {
   .card {
     gap: 16px;

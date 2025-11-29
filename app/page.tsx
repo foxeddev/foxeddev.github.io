@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
@@ -17,7 +15,8 @@ import Footer from "@/components/Footer";
 import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
 import cardStyles from "@/styles/card.module.css";
-import SplitType from "split-type";
+// import SplitType from "split-type";
+import ModrinthProject from "@/components/ModrinthProject";
 import Copy from "@/components/Copy";
 
 export default function Home() {
@@ -29,9 +28,9 @@ export default function Home() {
           <div className={titleStyles.title}>
             <p className={titleStyles.tagline}>Hi, I&apos;m</p>
             <h1
-              ref={(el) => {
-                if (el) new SplitType(el, { split: "chars" });
-              }}
+            // ref={(el) => {
+            //   if (el) new SplitType(el, { split: "chars" });
+            // }}
             >
               FOXED
             </h1>
@@ -44,6 +43,10 @@ export default function Home() {
       </header>
       <main>
         <section className="grid">
+          <ModrinthProject
+            className={cardStyles.card}
+            style={{ gridRowEnd: `span 2` }}
+          />
           <Link
             className={cardStyles.card}
             href={"https://modrinth.com/user/foxeddev"}

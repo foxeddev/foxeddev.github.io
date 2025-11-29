@@ -1,0 +1,22 @@
+.icon {
+  width: 150px;
+  height: 150px;
+  box-shadow: 10px 10px 0 0 var(--projectColor);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+  gap: 10px;
+}
+
+.titleInfo {
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+.title {
+  margin: 3px;
+}
