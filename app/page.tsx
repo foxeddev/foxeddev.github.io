@@ -15,9 +15,9 @@ import Footer from "@/components/Footer";
 import headerIconStyles from "@/styles/headerIcon.module.css";
 import titleStyles from "@/styles/title.module.css";
 import cardStyles from "@/styles/card.module.css";
-// import SplitType from "split-type";
 import ModrinthProject from "@/components/ModrinthProject";
 import Copy from "@/components/Copy";
+import SplitText from "@/components/SplitText";
 
 export default function Home() {
   return (
@@ -27,12 +27,8 @@ export default function Home() {
           <Logo className={headerIconStyles.icon} />
           <div className={titleStyles.title}>
             <p className={titleStyles.tagline}>Hi, I&apos;m</p>
-            <h1
-            // ref={(el) => {
-            //   if (el) new SplitType(el, { split: "chars" });
-            // }}
-            >
-              FOXED
+            <h1>
+              <SplitText text="FOXED" />
             </h1>
             <p className={titleStyles.subtitle}>
               I&apos;m a Minecraft data pack creator and web developer from

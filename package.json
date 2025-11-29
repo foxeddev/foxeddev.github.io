@@ -14,7 +14,6 @@
     "react-dom": "19.1.0",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
-    "split-type": "^0.3.4",
     "typerinth": "^1.2.0"
   },
   "devDependencies": {
