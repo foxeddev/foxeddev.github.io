@@ -127,11 +127,17 @@ export default function Home() {
               <Link href="https://hypr.land/" target="_blank">
                 Hyprland
               </Link>
-              )<br />
+              )
+              <br />
               Browser:{" "}
+              <Link href="https://zen-browser.app/" target="_blank">
+                Zen Browser
+              </Link>{" "}
+              (
               <Link href="https://www.firefox.com/" target="_blank">
                 Firefox
               </Link>
+              )
               <br />
               Editor:{" "}
               <Link href="https://code.visualstudio.com/" target="_blank">
