@@ -86,12 +86,12 @@ h1 {
 
 h1 .char {
   transition: 0.1s;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 0 var(--accent);
 }
 
 h1 .char:hover {
-  transform: translateY(-20px);
-  text-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
+  transform: translate(-10px, -10px);
+  text-shadow: 10px 10px 0 var(--accent);
 }
 
 @media screen and (max-width: 900px) {
