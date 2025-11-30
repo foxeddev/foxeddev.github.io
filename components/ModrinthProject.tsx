@@ -44,7 +44,7 @@ export default async function ModrinthProject(props: ModrinthProjectProps) {
       )}
       <div className={styles.textContainer}>
         <div>
-          <p className={styles.titleInfo}>Latest project</p>
+          <p className={styles.titleInfo}>Latest Project</p>
           <h3 className={styles.title}>
             <mark>{project.title}</mark>
           </h3>
