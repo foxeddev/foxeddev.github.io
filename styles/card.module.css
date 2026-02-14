@@ -5,7 +5,7 @@
   background-color: var(--bg);
   text-align: center;
   align-items: center;
-  overflow-x: scroll;
+  overflow-x: auto;
   box-shadow: 0 0 0 0 var(--primary);
   transition: 0.15s;
 }
