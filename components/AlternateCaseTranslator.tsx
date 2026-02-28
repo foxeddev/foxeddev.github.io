@@ -37,7 +37,7 @@ export default function AlternateCaseTranslator() {
   });
 
   return (
-    <div className="flex flex-row justify-center gap-4 col-span-2 bg-bg p-4 rounded-4xl">
+    <div className="flex flex-row justify-center gap-4 col-span-2 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-4 transition hover:-translate-2">
       <textarea
         ref={input}
         rows={4}
