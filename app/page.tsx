@@ -6,6 +6,7 @@ import foxFaceplant from "@/public/fox_faceplant.gif";
 import ModrinthProject from "@/components/ModrinthProject";
 import Clock from "@/components/Clock";
 import { FaClock } from "react-icons/fa";
+import AlternateCaseTranslator from "@/components/AlternateCaseTranslator";
 
 export default function Home() {
   return (
@@ -99,6 +100,7 @@ export default function Home() {
             <SiKofi className="mx-auto size-12 text-accent" />
             <p className="font-medium text-primary text-xl">Ko-Fi</p>
           </Link>
+          <AlternateCaseTranslator />
           <Clock />
           <div className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2">
             <FaClock className="mx-auto size-12 text-accent" />
