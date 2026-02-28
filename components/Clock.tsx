@@ -1,68 +1,73 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./Clock.module.css";
 
 export default function Clock({
-  showSeconds = false,
-  showSubtext = false,
+  showSeconds = true,
+  showSubtext = true,
 }: {
   showSeconds?: boolean;
   showSubtext?: boolean;
 }) {
-  const [isClient, setIsClient] = useState(false);
+  const now = new Date();
+  const [time, setTime] = useState({
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  const getTimeParts = () => {
-    const now = new Date();
-    return {
+  const updateTime = () => {
+    setTime({
       hours: now.getHours().toString().padStart(2, "0"),
       minutes: now.getMinutes().toString().padStart(2, "0"),
       seconds: now.getSeconds().toString().padStart(2, "0"),
-    };
+    });
   };
 
-  const [time, setTime] = useState(getTimeParts());
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(getTimeParts());
-    }, 1000);
+    const interval = setInterval(() => updateTime(), 100);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
-    <h3 className={styles.clock}>
-      {/* Hours */}
-      <span>
-        {showSubtext ? <small>hours</small> : ""}
-        {isClient ? time.hours : "##"}
-      </span>
+    <div className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2">
+      <p className="font-mono font-bold text-primary text-5xl">
+        {/* Hours */}
+        <span className="relative">
+          {showSubtext ? (
+            <small className="top-14 absolute text-sm">hours</small>
+          ) : (
+            ""
+          )}
+          {time.hours}
+        </span>
 
-      <span>:</span>
+        <span>:</span>
 
-      {/* Minutes */}
-      <span>
-        {showSubtext && <small>minutes</small>}
-        {isClient ? time.minutes : "##"}
-      </span>
+        {/* Minutes */}
+        <span className="relative">
+          {showSubtext && (
+            <small className="top-14 absolute text-sm">minutes</small>
+          )}
+          {time.minutes}
+        </span>
 
-      {showSeconds ? (
-        <>
-          <span>:</span>
+        {showSeconds ? (
+          <>
+            <span>:</span>
 
-          {/* Seconds */}
-          <span>
-            {showSubtext && <small>seconds</small>}
-            {isClient ? time.seconds : "##"}
-          </span>
-        </>
-      ) : (
-        ""
-      )}
-    </h3>
+            {/* Seconds */}
+            <span className="relative">
+              {showSubtext && (
+                <small className="top-14 absolute text-sm">seconds</small>
+              )}
+              {time.seconds}
+            </span>
+          </>
+        ) : (
+          ""
+        )}
+      </p>
+    </div>
   );
 }

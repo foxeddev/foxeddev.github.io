@@ -1,165 +1,118 @@
-import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/components/Logo";
-import {
-  SiGithub,
-  SiDiscord,
-  SiGmail,
-  SiModrinth,
-  SiKofi,
-} from "react-icons/si";
-import { FaClock } from "react-icons/fa";
-import FoxFaceplant from "@/public/img/fox_faceplant.gif";
-import Clock from "@/components/Clock";
-import Footer from "@/components/Footer";
-import headerIconStyles from "@/styles/headerIcon.module.css";
-import titleStyles from "@/styles/title.module.css";
-import cardStyles from "@/styles/card.module.css";
+import Link from "next/link";
+import { SiGithub, SiModrinth, SiDiscord, SiKofi } from "react-icons/si";
+import arcticFox from "@/public/arctic_fox.jpg";
+import foxFaceplant from "@/public/fox_faceplant.gif";
 import ModrinthProject from "@/components/ModrinthProject";
-import Copy from "@/components/Copy";
-import SplitText from "@/components/SplitText";
+import Clock from "@/components/Clock";
+import { FaClock } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div>
-      <header>
-        <section>
-          <Logo className={headerIconStyles.icon} />
-          <div className={titleStyles.title}>
-            <p className={titleStyles.tagline}>Hi, I&apos;m</p>
-            <h1>
-              <SplitText text="FOXED" />
-            </h1>
-            <p className={titleStyles.subtitle}>
-              I&apos;m a Minecraft data pack creator and web developer from
-              Germany.
-            </p>
-          </div>
-        </section>
+    <div
+      id="wrapper"
+      className="selection:bg-secondary min-h-dvh overflow-x-hidden overflow-y-scroll text-text"
+    >
+      <Image
+        src={arcticFox}
+        alt="An arctic fox in a snowy environment"
+        placeholder="blur"
+        className="top-0 left-0 -z-1 fixed size-full object-cover select-none"
+      />
+      <header className="flex flex-col justify-end items-center h-dvh">
+        <div className="flex flex-col gap-4 bg-bg-transparent p-4 md:p-16 w-full max-w-4xl">
+          <svg
+            width="256"
+            height="256"
+            viewBox="0 0 256 256"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="relative mx-auto -mt-32 mb-8"
+          >
+            <circle cx="128" cy="128" r="128" fill="#1E1E1E" />
+            <path
+              d="M128 224L48 170.667V64L128 117.333L208 64V170.667L128 224Z"
+              stroke="white"
+              strokeWidth="12"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M117.333 160L90.6667 144V176L117.333 160Z"
+              stroke="white"
+              strokeWidth="12"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M165.333 144L138.667 160L165.333 176V144Z"
+              stroke="white"
+              strokeWidth="12"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <p className="font-mono text-text-secondary text-3xl md:text-4xl text-center">
+            Hi, I&apos;m
+          </p>
+          <h1 className="font-black text-8xl md:text-9xl text-center">FOXED</h1>
+          <p className="font-mono text-text-secondary text-lg md:text-xl text-center">
+            I&apos;m a Minecraft data pack creator and web developer from
+            Germany.
+          </p>
+        </div>
       </header>
-      <main>
-        <section className="grid">
-          <ModrinthProject
-            className={cardStyles.card}
-            style={{ gridRowEnd: `span 2` }}
-          />
+      <main className="flex flex-col items-center">
+        <div className="gap-4 grid grid-cols-1 md:grid-cols-2 bg-bg-transparent p-4 md:p-16 w-full max-w-4xl">
+          <ModrinthProject />
           <Link
-            className={cardStyles.card}
-            href={"https://modrinth.com/user/foxeddev"}
+            href="https://github.com/foxeddev"
             target="_blank"
+            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
-            <SiModrinth />
-            <h3>
-              Modrinth: <mark>FoxedDev</mark>
-            </h3>
+            <SiGithub className="mx-auto size-12 text-accent" />
+            <p className="font-medium text-primary text-xl">GitHub</p>
           </Link>
           <Link
-            className={cardStyles.card}
-            href={"https://github.com/foxeddev"}
+            href="https://modrinth.com/user/foxeddev"
             target="_blank"
+            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
-            <SiGithub />
-            <h3>
-              GitHub: <mark>FoxedDev</mark>
-            </h3>
+            <SiModrinth className="mx-auto size-12 text-accent" />
+            <p className="font-medium text-primary text-xl">Modrinth</p>
           </Link>
-          <Copy
-            className={cardStyles.card}
-            style={{ cursor: "pointer" }}
-            copytext="foxeddev"
+          <Link
+            href="https://discord.gg/gjKuefgX4T"
+            target="_blank"
+            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
-            <SiDiscord />
-            <h3>
-              Discord: <mark>FoxedDev</mark>
-            </h3>
-          </Copy>
+            <SiDiscord className="mx-auto size-12 text-accent" />
+            <p className="font-medium text-primary text-xl">Discord</p>
+          </Link>
           <Image
-            className={cardStyles.card}
-            src={FoxFaceplant}
-            alt={""}
-            style={{ gridRowEnd: `span 2` }}
-            unoptimized
+            src={foxFaceplant}
+            alt="GIF of a fox leaping into snow."
+            className="row-span-2 hover:shadow-[8px_8px_0_0_var(--color-primary)] size-full object-cover transition hover:-translate-2"
           />
           <Link
-            className={cardStyles.card}
-            href={"https://ko-fi.com/foxeddev"}
+            href="https://ko-fi.com/foxeddev"
             target="_blank"
+            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
-            <SiKofi />
-            <h3>
-              Ko-fi: <mark>FoxedDev</mark>
-            </h3>
+            <SiKofi className="mx-auto size-12 text-accent" />
+            <p className="font-medium text-primary text-xl">Ko-Fi</p>
           </Link>
-          <Link
-            className={cardStyles.card}
-            href={"mailto:foxed.dev@gmail.com"}
-            target="_blank"
-          >
-            <SiGmail />
-            <h3>
-              <mark>E-Mail</mark>
-            </h3>
-          </Link>
-          <div className={`${cardStyles.card} ${cardStyles.left}`}>
-            <h3>🌱 I&apos;m currently learning</h3>
-            <p>
-              React <br />
-              NextJS <br />
-              TailwindCSS <br />
-            </p>
+          <Clock />
+          <div className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2">
+            <FaClock className="mx-auto size-12 text-accent" />
+            <p className="font-medium text-xl">More stuff coming soon!</p>
           </div>
-          <div
-            className={`${cardStyles.card} ${cardStyles.left}`}
-            style={{ gridColumnEnd: `span 2` }}
-          >
-            <h3>💻 Tech Stack</h3>
-            <p>
-              OS:{" "}
-              <Link href="https://archlinux.org/" target="_blank">
-                Arch Linux
-              </Link>
-              <br />
-              WM:{" "}
-              <Link href="https://hydeproject.pages.dev/" target="_blank">
-                HyDE
-              </Link>{" "}
-              (
-              <Link href="https://hypr.land/" target="_blank">
-                Hyprland
-              </Link>
-              )
-              <br />
-              Browser:{" "}
-              <Link href="https://zen-browser.app/" target="_blank">
-                Zen Browser
-              </Link>{" "}
-              (
-              <Link href="https://www.firefox.com/" target="_blank">
-                Firefox
-              </Link>
-              )
-              <br />
-              Editor:{" "}
-              <Link href="https://code.visualstudio.com/" target="_blank">
-                Visual Studio Code
-              </Link>
-              <br />
-              Minecraft Launcher:{" "}
-              <Link href="https://prismlauncher.org/" target="_blank">
-                Prism Launcher
-              </Link>
-            </p>
-          </div>
-          <div className={cardStyles.card}>
-            <Clock showSeconds showSubtext />
-          </div>
-          <div className={cardStyles.card}>
-            <FaClock />
-            <h3>More stuff coming soon!</h3>
-          </div>
-        </section>
+        </div>
       </main>
-      <Footer />
+      <footer className="flex flex-col items-center">
+        <div className="bg-bg-transparent p-4 md:p-16 w-full max-w-4xl">
+          <p className="font-mono text-text-secondary text-center">
+            Made with 💜 by Foxed.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

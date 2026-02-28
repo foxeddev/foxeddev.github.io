@@ -1,118 +1,14 @@
-:root {
-  --text: #1e1e1e;
-  --text-gray: #757575;
-  --bg: #ffffff;
-  --bg-alpha: rgba(255, 255, 255, 0.75);
-  --primary: #5519f4;
-  --secondary: #a2d2ff;
-  --accent: #f86fb2;
+@import "tailwindcss";
 
-  --sans: "Rubik", Arial, Helvetica, sans-serif;
-  --mono: "Space Mono", "Courier New", monospace;
+@theme inline {
+  --color-text: #1e1e1e;
+  --color-text-secondary: #757575;
+  --color-bg: #ffffff;
+  --color-bg-transparent: #ffffffbf;
+  --color-primary: #5519f4;
+  --color-secondary: #a2d2ff;
+  --color-accent: #f86fb2;
 
-  --max-w-mobile: 900px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #e0e0e0;
-    --text-gray: #8a8a8a;
-    --bg: #000000;
-    --bg-alpha: rgba(0, 0, 0, 0.75);
-    --primary: #9bc2e6;
-    --secondary: #5519f4;
-    --accent: #ee43a1;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  font-kerning: none;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-body {
-  color: var(--text);
-  background: var(--bg);
-  font-family: var(--sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::selection {
-  background-color: var(--secondary);
-}
-
-a {
-  color: var(--primary);
-}
-
-a:not(p a) {
-  color: var(--text);
-  text-decoration: none;
-}
-
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-body > img {
-  position: fixed;
-  z-index: -1;
-  height: 100vh;
-  width: 100vw;
-}
-
-h1 {
-  font-size: 128px;
-  font-weight: 800;
-}
-
-h1 .char {
-  transition: 0.1s;
-  text-shadow: 0 0 0 var(--accent);
-}
-
-h1 .char:hover {
-  transform: translate(-10px, -10px);
-  text-shadow: 10px 10px 0 var(--accent);
-}
-
-@media screen and (max-width: 900px) {
-  h1 {
-    font-size: 96px;
-  }
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-mark {
-  color: var(--primary);
-  background-color: transparent;
-}
-
-p {
-  color: var(--text-gray);
-  font-family: var(--mono);
-  font-size: 16px;
-  font-weight: 400;
+  --font-sans: "Rubik";
+  --font-mono: "Space Mono";
 }
