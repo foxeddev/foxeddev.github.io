@@ -34,8 +34,8 @@ export default async function ModrinthProject() {
           <Image
             src={project.icon_url}
             alt="Project Icon"
-            width="96"
-            height="96"
+            width={96}
+            height={96}
             placeholder="empty"
             className="shadow-[8px_8px_0_0_var(--projectColor)] -translate-2"
           />
