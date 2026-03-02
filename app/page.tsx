@@ -20,8 +20,8 @@ export default function Home() {
         placeholder="blur"
         className="top-0 left-0 -z-1 fixed size-full object-cover select-none"
       />
-      <header className="flex flex-col justify-end items-center h-dvh">
-        <div className="flex flex-col gap-4 bg-bg-transparent p-4 md:p-16 w-full max-w-4xl">
+      <header className="flex flex-col justify-end items-center min-h-dvh">
+        <div className="flex flex-col gap-4 bg-bg-transparent mt-32 p-4 md:p-16 w-full max-w-4xl">
           <svg
             width="256"
             height="256"
