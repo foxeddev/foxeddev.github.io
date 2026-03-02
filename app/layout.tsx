@@ -14,18 +14,18 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foxeddev.github.io"),
+  metadataBase: new URL("https://foxeddev.vercel.app/"),
   title: { default: "Hi, I'm Foxed!", template: "%s | FoxedDev" },
   description:
     "I'm a Minecraft data pack creator and web developer from Germany.",
   openGraph: {
     type: "website",
-    url: "https://foxeddev.github.io",
+    url: "/",
     title: "Hi, I'm Foxed!",
     description:
       "I'm a Minecraft data pack creator and web developer from Germany.",
     siteName: "FoxedDev",
-    images: [{ url: "https://foxeddev.github.io/img/logo.png" }],
+    images: [{ url: "/thumbnail.png" }],
   },
 };
 
