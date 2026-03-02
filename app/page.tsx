@@ -66,7 +66,7 @@ export default function Home() {
           <Link
             href="https://github.com/foxeddev"
             target="_blank"
-            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
+            className="flex flex-col justify-center gap-4 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
             <SiGithub className="mx-auto size-12 text-accent" />
             <p className="font-medium text-primary text-xl">GitHub</p>
@@ -74,7 +74,7 @@ export default function Home() {
           <Link
             href="https://modrinth.com/user/foxeddev"
             target="_blank"
-            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
+            className="flex flex-col justify-center gap-4 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
             <SiModrinth className="mx-auto size-12 text-accent" />
             <p className="font-medium text-primary text-xl">Modrinth</p>
@@ -82,7 +82,7 @@ export default function Home() {
           <Link
             href="https://discord.gg/gjKuefgX4T"
             target="_blank"
-            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
+            className="flex flex-col justify-center gap-4 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
             <SiDiscord className="mx-auto size-12 text-accent" />
             <p className="font-medium text-primary text-xl">Discord</p>
@@ -90,19 +90,19 @@ export default function Home() {
           <Image
             src={foxFaceplant}
             alt="GIF of a fox leaping into snow."
-            className="row-span-2 hover:shadow-[8px_8px_0_0_var(--color-primary)] size-full object-cover transition hover:-translate-2"
+            className="row-span-2 shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] size-full object-cover transition hover:-translate-2"
           />
           <Link
             href="https://ko-fi.com/foxeddev"
             target="_blank"
-            className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
+            className="flex flex-col justify-center gap-4 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
             <SiKofi className="mx-auto size-12 text-accent" />
             <p className="font-medium text-primary text-xl">Ko-Fi</p>
           </Link>
           <AlternateCaseTranslator />
           <Clock />
-          <div className="flex flex-col justify-center gap-4 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2">
+          <div className="flex flex-col justify-center gap-4 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2">
             <FaClock className="mx-auto size-12 text-accent" />
             <p className="font-medium text-xl">More stuff coming soon!</p>
           </div>

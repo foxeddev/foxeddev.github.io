@@ -18,7 +18,7 @@ export default async function ModrinthProject() {
     <Link
       href={`https://modrinth.com/project/${project.id}`}
       target="_blank"
-      className="flex flex-col justify-center gap-4 row-span-2 bg-bg hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
+      className="flex flex-col justify-center gap-4 row-span-2 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
     >
       <div
         className="mx-auto w-fit bg-(--projectColor)"
