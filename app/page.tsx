@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </header>
       <main className="flex flex-col items-center">
-        <div className="gap-4 grid grid-cols-1 md:grid-cols-2 bg-bg-transparent p-4 md:p-16 w-full max-w-4xl">
+        <div className="flex flex-col gap-4 md:grid md:grid-cols-2 bg-bg-transparent p-4 md:p-16 w-full max-w-4xl">
           <ModrinthProject />
           <Link
             href="https://github.com/foxeddev"
