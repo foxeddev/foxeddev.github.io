@@ -98,7 +98,7 @@ export default function Home() {
             className="flex flex-col justify-center gap-4 bg-bg shadow-[0_0_0_0_var(--color-primary)] hover:shadow-[8px_8px_0_0_var(--color-primary)] p-8 text-center transition hover:-translate-2"
           >
             <SiKofi className="mx-auto size-12 text-accent" />
-            <p className="font-medium text-primary text-xl">Ko-Fi</p>
+            <p className="font-medium text-primary text-xl">Ko-fi</p>
           </Link>
           <AlternateCaseTranslator />
           <Clock />
