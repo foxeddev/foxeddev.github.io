@@ -1,20 +1,16 @@
-import { Modrinth } from "typerinth";
 import Image from "next/image";
 import Link from "next/link";
 import { CSSProperties } from "react";
+import { getLatestUserProject } from "@/app/lib/modrinth";
 
 function intToHexColor(value: number) {
   return value.toString(16).padStart(6, "0");
 }
 
 export default async function ModrinthProject() {
-  const modrinth = new Modrinth();
-  const userProjects = await modrinth.getUserProjects("foxeddev");
-  const project = userProjects.reduce((latest, current) =>
-    new Date(current.published) > new Date(latest.published) ? current : latest,
-  );
+  const project = await getLatestUserProject("foxeddev");
 
-  return (
+  return project ? (
     <Link
       href={`https://modrinth.com/project/${project.id}`}
       target="_blank"
@@ -46,5 +42,5 @@ export default async function ModrinthProject() {
         <p className="font-mono text-text-secondary">{project.description}</p>
       </div>
     </Link>
-  );
+  ) : null;
 }
