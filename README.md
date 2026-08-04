@@ -1,0 +1,11 @@
+<div align="center">
+
+# :warning:
+
+### This repository was moved to Codeberg!
+
+  <br />
+
+**[<kbd> <br> Visit ↗ <br> </kbd>](https://codeberg.org/foxeddev/foxeddev-website/)**
+
+</div>
